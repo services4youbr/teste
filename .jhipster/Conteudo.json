@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "pagina",
+            "otherEntityName": "pagina",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "ordem",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "conteudo",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180620014633",
+    "entityTableName": "conteudo",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "conteudo"
+}

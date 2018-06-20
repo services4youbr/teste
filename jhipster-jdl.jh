@@ -1,0 +1,36 @@
+entity Site{
+	nome String,
+    url String
+}
+
+entity Grupo{
+	nome String
+}
+
+entity Pagina{
+	titulo String,
+    nome String
+}
+
+entity Conteudo{
+	ordem Integer,
+    conteudo String
+}
+
+
+relationship ManyToOne {
+	Grupo{site} to Site{grupos}
+    Pagina{grupo} to Grupo{paginas}
+    Conteudo{pagina} to Pagina{conteudos}
+}
+
+
+// Set pagination options
+paginate * with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+// Set an angular suffix
+angularSuffix * with conteudo
